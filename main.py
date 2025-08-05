@@ -1,3 +1,9 @@
+##### [ 계산기 ]
+##### Calculator in python by Napple7724 on August 5, 2025
+##### Version : release 1.0.1
+#################################################################
+## 실행하기 전 "README.md"와 "LICENSE.md"를 읽어주세요.
+## Please read "README.md" and "LICENSE.md" before running.
 import time
 print("Loading...")
 time.sleep(0.5)
