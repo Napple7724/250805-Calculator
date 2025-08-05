@@ -14,7 +14,6 @@ try :
         str_sign = input("부호(+, -, *, /, ^)를 입력하세요.\n  : ")
         if str_sign == "+" :
             int_a = sum(list_num)
-            break
         elif str_sign == "-" :
             int_a = list_num[0]
             for sys_int_r1 in range(1, len(list_num) + 1) :
@@ -23,7 +22,21 @@ try :
             int_a = list_num[0]
             for sys_int_r1 in range(1, len(list_num) + 1) :
                 int_a *= list_num[sys_int_r1]
+        elif str_sign == "/" :
+            int_a = list_num[0]
+            try :
+                for sys_int_r1 in range(1, len(list_num) + 1) :
+                    int_a /= list_num[sys_int_r1]
+            except ZeroDivisionError :
+                print("\n\n오류! : 0으로 나눌 수 없습니다.")
+                continue
+        elif str_sign == "^" :
+            for sys_int_r1 in range(1, len(list_num) + 1) :
+                int_a **= list_num[sys_int_r1]
         else :
             print("\n\n오류! : 정해진 부호 중 하나를 입력하세요.")
-except ZeroDivisionError :
+            continue
+        break
+    print(f"\n\n= {int_a}")
+except :
     print("오류! : 알 수 없는 오류가 발생했습니다.")
