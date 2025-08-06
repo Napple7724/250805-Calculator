@@ -1,16 +1,17 @@
 ##### [ 계산기 ]
 ##### Calculator in python by Napple7724 on August 5, 2025
-##### Version : release 1.1.1
+##### Version : release 2.0
 #################################################################
 ## 실행하기 전 "README.md"와 "LICENSE.md"를 읽어주세요.
 ## Please read "README.md" and "LICENSE.md" before running.
+from calc_api import calc_api  ## calc_api.py
 from time import sleep
 from random import uniform
 print("Loading...")
 sleep(uniform(0.3, 0.5))
 while True :
     try :
-        print("\n\n[ 계산기 ]\nCalculator in python by Napple7724 on August 5, 2025\nVersion : release 1.1.1\n")
+        print("\n\n[ 계산기 ]\nCalculator in python by Napple7724 on August 5, 2025\nVersion : release 2.0\n")
         sleep(uniform(0.03, 0.1))
         while True :
             try :
@@ -23,37 +24,11 @@ while True :
                 print("\n\n오류! : 숫자를 입력하세요.")
             sleep(uniform(0.03, 0.1))
         print("\n")
-        while True :
-            sleep(uniform(0.03, 0.1))
-            str_sign = input("부호(+, -, *, /, ^)를 입력하세요.\n  : ")
-            int_a = list_num[0]
-            if str_sign == "+" :
-                int_a = sum(list_num)
-            elif str_sign == "-" :
-                for sys_int_r1 in range(1, len(list_num)) :
-                    int_a -= list_num[sys_int_r1]
-            elif str_sign == "*" :
-                for sys_int_r1 in range(1, len(list_num)) :
-                    int_a *= list_num[sys_int_r1]
-            elif str_sign == "/" :
-                try :
-                    for sys_int_r1 in range(1, len(list_num)) :
-                        int_a /= list_num[sys_int_r1]
-                except ZeroDivisionError :
-                    print("\n\n오류! : 0으로 나눌 수 없습니다.")
-                    continue
-            elif str_sign == "^" :
-                for sys_int_r1 in range(1, len(list_num)) :
-                    int_a **= list_num[sys_int_r1]
-            else :
-                print("\n\n오류! : 정해진 부호 중 하나를 입력하세요.")
-                continue
-            break
-        print(f"\n\n :: {int_a}")
+        print(f"\n\n :: {calc_api(list_num)}")
     except KeyboardInterrupt :
         print("\n\n종료합니다.")
         quit()
-    except :
+    except ZeroDivisionError :
         print("\n\n오류! : 알 수 없는 오류가 발생했습니다.")
     print("\n")
     try :
