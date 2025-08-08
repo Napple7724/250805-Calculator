@@ -1,6 +1,6 @@
 ##### [ 계산기 ]
 ##### Calculator in python by Napple7724 on August 5, 2025
-##### Version : release 2.1
+##### Version : release 2.1.1
 #################################################################
 ## 실행하기 전 "README.md"와 "LICENSE.md"를 읽어주세요.
 ## Please read "README.md" and "LICENSE.md" before running.
@@ -16,7 +16,7 @@ print("Loading...")
 sleep(uniform(0.3, 0.5))
 while True :
     try :
-        print("\n\n[ 계산기 ]\nCalculator in python by Napple7724 on August 5, 2025\nVersion : release 2.1\n")
+        print("\n\n[ 계산기 ]\nCalculator in python by Napple7724 on August 5, 2025\nVersion : release 2.1.1\n")
         sleep(uniform(0.03, 0.1))
         while True :
             try :
