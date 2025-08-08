@@ -4,5 +4,6 @@
 
 <br>
 
+---
 실행하기 전 "README.md"와 "LICENSE.md"를 읽어주세요.<br>
 Please read "README.md" and "LICENSE.md" before running.

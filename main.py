@@ -1,6 +1,6 @@
 ##### [ 계산기 ]
 ##### Calculator in python by Napple7724 on August 5, 2025
-##### Version : release 2.0.2
+##### Version : release 2.1
 #################################################################
 ## 실행하기 전 "README.md"와 "LICENSE.md"를 읽어주세요.
 ## Please read "README.md" and "LICENSE.md" before running.
@@ -8,6 +8,7 @@
 
 from calc_api import calc_api  ## calc_api.py
 
+from sys import exit as sys_exit
 from time import sleep
 from random import uniform
 
@@ -15,7 +16,7 @@ print("Loading...")
 sleep(uniform(0.3, 0.5))
 while True :
     try :
-        print("\n\n[ 계산기 ]\nCalculator in python by Napple7724 on August 5, 2025\nVersion : release 2.0.2\n")
+        print("\n\n[ 계산기 ]\nCalculator in python by Napple7724 on August 5, 2025\nVersion : release 2.1\n")
         sleep(uniform(0.03, 0.1))
         while True :
             try :
@@ -31,7 +32,7 @@ while True :
         print(f"\n\n :: {calc_api(list_num)}")
     except KeyboardInterrupt :
         print("\n\n종료합니다.")
-        quit()
+        break
     except :
         print("\n\n오류! : 알 수 없는 오류가 발생했습니다.")
     print("\n")
@@ -48,9 +49,9 @@ while True :
                 sleep(uniform(0.03, 0.1))
                 print("\n\n종료합니다.")
                 sleep(uniform(0.03, 0.1))
-                quit()
+                sys_exit()
             else :
                 print("\n\n오류! : 정해진 문자 중 하나를 입력하세요.")
     except KeyboardInterrupt :
         print("\n\n종료합니다.")
-        quit()
+        break
