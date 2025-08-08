@@ -1,14 +1,14 @@
 ##### [ 계산기 API ]
 ##### CalculatorAPI in python by Napple7724 on August 5, 2025
-##### Version : release 1.0.1
+##### Version : release 1.1.1
 #################################################################
 ## 실행하기 전 "README.md"와 "LICENSE.md"를 읽어주세요.
 ## Please read "README.md" and "LICENSE.md" before running.
 
 
-from time import sleep
-from random import uniform
 def calc_api(list_num_api) :
+    from time import sleep
+    from random import uniform
     while True :
         sleep(uniform(0.03, 0.1))
         str_sign = input("부호(+, -, *, /, ^)를 입력하세요.\n  : ")
